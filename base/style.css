@@ -1,0 +1,80 @@
+#titulo{
+    color: #f8f8ff;
+    font-weight: bold;
+    text-align: center;
+    margin-top:6rem;
+}
+html{
+    font-size: 93.75%;/* O tamanho da fonte padrão no navegador é de 16px, então se 100% são 16px, 93.75% são 15px por regra de 3*/
+}
+body{
+    background-image: linear-gradient(to bottom, #9f00ed, #7600a9);
+    /*background: #8600c6;*/
+    font-family:'Hind Guntur', sans-serif;
+    color: #7600a9;
+    height: 100vh;
+    width: 100%;
+}
+
+#formulario{
+    background: #f8f8ff;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    margin-top:6rem;
+    margin-bottom: 4rem ;
+    margin-left: auto;
+    margin-right:auto;
+    width: min(50vw,500px);
+    display: flex;    
+    justify-content: center;
+    
+    
+}
+
+#foot{
+    color:#f8f8ff;
+    /*position:asolute*/    
+    /*bottom: 2rem;
+    right: 2rem;*/
+    width: min(62vw,600px);
+    margin-left: auto;
+    margin-right:auto;
+    justify-content:left;
+    /*border: 1px solid;*/
+    
+}
+#byMe{
+    /*border: 1px solid;*/
+    text-align: right;
+    margin-left: min(50%,100%);
+}
+input{
+    border: 0.5px solid #e5e5e5;
+    width: 100%;
+    padding:0.5rem;
+
+}
+
+.input-group{
+    margin-top: 0.8rem;
+    width:90%;
+    justify-content: center;
+}
+.action{
+    margin-top: 1.3rem;
+    text-align: center;
+}
+button{
+    background:  #7600a9;
+    color:#f8f8ff;
+    border: none;
+    cursor: pointer;
+    width: 50%;
+    height: 2rem;
+    border-radius:1rem;
+    padding: 0;
+    display:inline-block;
+}
+button:hover{
+    background: #8600c6;
+}
