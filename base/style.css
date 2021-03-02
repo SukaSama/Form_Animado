@@ -39,7 +39,7 @@ form{
     animation-name: fade;
     animation-duration: 0.2s;
     width:min(50vw,500px);
-    overflow: hidden; /*Esconde tudo que estrapolar para fora desse campo com id #formulario*/  
+    overflow: hidden; /*Esconde tudo que estrapolar para fora desse campo*/  
     
 }
 
@@ -108,12 +108,30 @@ button{
 button:hover{
     background: #8600c6;
 }
-
-/*APARIÇÃO FADE NO FORMULÁRIO*/
-form { /*Aqui pega apenas os elementos do meu form*/
-    
+.squares li{
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.15);
+    display: block;
+    position: absolute;
+    bottom: -40px;
+    animation: up 2s infinite;
+    /*animation-direction: alternate;*/
 }
-
+@keyframes up{/*Quadradinhos movimento*/
+    from {
+        opacity: 0;
+        transform: translateY(0) rotate(960deg); /*o rotate faz o quadrado rodar*/
+    }
+    50%{
+        opacity: 1;
+    }
+    to{
+        opacity: 0;
+        transform: translateY(-1100px);
+    }
+}
+/*APARIÇÃO FADE NO FORMULÁRIO*/
 @keyframes fade{
     from {
         opacity: 0;
@@ -169,3 +187,16 @@ form.validate-error{
         transform: translateX(0);
     }
 }
+
+/*
+animation-name: nome; --->nome da animação
+animation-duration: 2s; --->duração total da animação
+animation-delay: 3s; --->tempo para a animação iniciar
+animation-fill-mode:none; --->em que momento a animação para, inicial ou final
+animation-play-state:running; --->determina se a animação vai estar rodando ou se vai dar um pause
+animation-timing-function:ease; ---> determina a progressão da animação
+animation-direction:reverse; ---> direção da animação, cima, baixo ... ou alternado (alternate, que vai pra cima e pra baixo) 
+animation-iteration-count: infinite; --->determina as iterações da animação, infinite determina que a animação se repete sempre
+
+https://matthewlein.com/tools/ceaser site para criar cuic-bezier timming
+*/
